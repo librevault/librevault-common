@@ -1,0 +1,30 @@
+Source: lvcommon
+Priority: optional
+Maintainer: Alexander Shishenko <alex@shishenko.com>
+Build-Depends: debhelper (>= 9), cmake, protobuf-compiler, libboost-all-dev, libprotobuf-dev (>= 3), libcrypto++-dev (>= 5.7.0~0)
+Standards-Version: 3.9.6
+Section: libs
+Homepage: https://librevault.com
+Vcs-Git: https://github.com/GamePad64/cryptodiff.git
+Vcs-Browser: https://github.com/GamePad64/cryptodiff
+
+Package: liblvcommon-dev
+Section: libdevel
+Architecture: any
+Depends: liblvcommon0 (= ${binary:Version}), ${misc:Depends}
+Description: Librevault common files
+ Librevault common files
+ 
+Package: liblvcommon0-dbg
+Section: debug
+Architecture: any
+Priority: extra
+Depends: libcryptodiff0 (= ${binary:Version}), ${misc:Depends}
+Description: Librevault common files
+ Librevault common files
+
+Package: liblvcommon0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Librevault common files
+ Librevault common files
